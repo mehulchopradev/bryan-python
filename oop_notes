@@ -1,0 +1,15 @@
+Object Oriented Programming
+- Have a mapping between real world semantics and software design
+
+1. Visualize real world actors as data in the software
+  - object
+  - every object needs a data type : class
+    - str, int, float, bool
+    - Student, Professor
+    - 1 to n objects are created from a class
+2. Real world actor characteristics -> Attributes of the object
+  - name, gender, roll, marks
+  - every object will have its own set of attributes
+  - grouped together inside an object
+3. Real world actor actions -> Methods being called on the object
+  - getGrade, getDetails
