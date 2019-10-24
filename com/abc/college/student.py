@@ -7,7 +7,8 @@ class Student:
   # access class attrbute
   # class name.attribute name
 
-  def __init__(self, name, gender, roll, marks=0):
+  def __init__(self, name, gender, roll, marks=0, contact_nos=None):
+    # None means variable which does not refer to any object. Like null
     # create attributes in the object
     # constructor
 
@@ -16,13 +17,23 @@ class Student:
     self.gender = gender
     self.roll = roll
     self.marks = marks
+    self.contact_nos = contact_nos
 
     Student.count += 1
 
   def get_details(self):
     # self - current object for which the method was intended to be called (Student)
-    return 'Name : ' + self.name + '\nGender: ' + self.gender + '\nRoll: ' + str(self.roll) \
-    + '\nMarks: ' + str(self.marks)
+    part1 = 'Name : ' + self.name + '\nGender: ' + self.gender + '\nRoll: ' + str(self.roll) \
+    + '\nMarks: ' + str(self.marks) + '\n'
+
+    part2 = 'Contact Nos: '
+    if self.contact_nos:
+      for contact_no in self.contact_nos:
+        part2 += '\n' + contact_no
+    else:
+      part2 += 'NA'
+    
+    return part1 + part2
 
   def get_grade(self):
     marks = self.marks
@@ -42,3 +53,6 @@ class Student:
     # class methods do not have self
     # class methods will never have a requirement to access attributes of an object
     return Student.count
+
+  def get_name_roll(self):
+    return (self.name, self.roll)

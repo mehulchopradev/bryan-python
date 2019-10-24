@@ -6,7 +6,7 @@ print(Student.get_count())
 # Internally
 # Student.getCount()
 
-s1 = Student('mehul', 'm', 10, 67) # 4003 - Student
+s1 = Student('mehul', 'm', 10, 67, ['98887879', '986876788']) # 4003 - Student
 s1.name = 'Mehul'
 # Internally
 # 1. 4003 -> memory is reserved for Student object
@@ -19,7 +19,7 @@ s1.roll = 10
 s1.marks = 67'''
 
 
-s2 = Student('bryan', 'm', 11, 92) # 4009 - Student
+s2 = Student('bryan', 'm', 11, 92, ['87678687']) # 4009 - Student
 # Internally
 # 1. 4009 -> memory is reserved for Student object
 # 2. Student.__init__(4009)
@@ -62,3 +62,12 @@ print(s1.get_grade())
 
 print(s2.get_grade())
 # Student.get_grade(s2)
+
+'''t = s1.get_name_roll()
+print(t[0])
+print(t[1])'''
+
+name, roll = s1.get_name_roll() # tuple unpacking
+print(name)
+print(roll)
+# Student.get_name_roll(s1)
