@@ -23,8 +23,12 @@ class Student:
 
   def get_details(self):
     # self - current object for which the method was intended to be called (Student)
-    part1 = 'Name : ' + self.name + '\nGender: ' + self.gender + '\nRoll: ' + str(self.roll) \
-    + '\nMarks: ' + str(self.marks) + '\n'
+    '''part1 = 'Name : ' + self.name + '\nGender: ' + self.gender + '\nRoll: ' + str(self.roll) \
+    + '\nMarks: ' + str(self.marks) + '\n' '''
+    ''' part1 = 'Name: {0}\nGender: {1}\nRoll: {2}\nMarks: {3}'.format(\
+      self.name, self.gender, self.roll, self.marks) '''
+    part1 = 'Name: {name}\nGender: {gender}\nRoll: {roll}\nMarks: {marks}'.format(gender=self.gender,\
+      name=self.name, roll=self.roll, marks=self.marks)
 
     part2 = 'Contact Nos: '
     if self.contact_nos:

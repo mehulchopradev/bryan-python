@@ -44,7 +44,8 @@ import com.abc.lib.math as mymath
 from math import factorial
 
 while True:
-  print('1. Fibo series\n2. Even Series\n3. Even or Odd\n4. Factorial\n5. Exit')
+  # print('1. Fibo series\n2. Even Series\n3. Even or Odd\n4. Factorial\n5. Exit')
+  print('1. Fibo series', '2. Even Series', '3. Even or Odd', '4. Factorial', '5. Exit', sep='\n')
   choice = int(input('Enter choice: '))
 
   if choice == 5:

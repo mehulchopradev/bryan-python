@@ -12,6 +12,10 @@ def get_fibo_series(n):
     c = a + b
     result = result + str(c) + '\t'
     a, b = b, c
+  print(v) # last value in the for loop
+  print(c) # last value in the for loop
+  # scope of variables in python is never the block scoped (which is true in languages like java)
+  # scope is rather the enclosing function (if it exists) or the entire module
   return result
 
 def get_even_series(n):
