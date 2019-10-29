@@ -38,3 +38,17 @@ def mno(k):
 
 m = mno(20) # m - rty - callable
 print(m(5))
+
+# function -> kkr: module
+def kkr(f):
+  i = 10
+  j = f(i) # func(el)
+  return j ** 2
+
+# function -> func: module
+def func(el):
+  return el + 10
+
+print(kkr(func))
+# pass a function as an argument to another function
+# callback functions
